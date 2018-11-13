@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Grouping.GroupingPage"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:Grouping"
+                  xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+                  xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable">
+    <ContentPage.BindingContext>
+        <local:ListViewGroupingViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <syncfusion:SfListView x:Name="listView" ItemSize="80" ItemSpacing="3"
+                         ItemsSource="{Binding ContactsInfo}">
+                <syncfusion:SfListView.DataSource>
+                    <dataSource:DataSource>
+                        <dataSource:DataSource.SortDescriptors>
+                            <dataSource:SortDescriptor PropertyName="ContactName" Direction="Ascending"/>
+                        </dataSource:DataSource.SortDescriptors>
+                    </dataSource:DataSource>
+                </syncfusion:SfListView.DataSource>
+
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="2" Margin="2" >
+                            <Frame x:Name="frame" HasShadow="True" OutlineColor="Black" CornerRadius="0"
+                           Padding="2" Margin="2">
+                                <Grid Grid.Column="0"
+                                          RowSpacing="1"
+                                          Padding="10,0,0,0"
+                                          VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label LineBreakMode="NoWrap"
+                                       Text="{Binding ContactName}"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                         TextColor="Teal">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <OnPlatform.WinPhone>
+                                                    <OnIdiom x:TypeArguments="x:Double" Phone="20" Tablet="20" />
+                                                </OnPlatform.WinPhone>
+                                                <OnPlatform.Android>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                                         Phone="16"
+                                                         Tablet="18" />
+                                                </OnPlatform.Android>
+                                                <OnPlatform.iOS>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                                         Phone="18"
+                                   Tablet="20" />
+                                                </OnPlatform.iOS>
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       LineBreakMode="NoWrap"
+                                       Text="{Binding ContactNumber}"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       TextColor="Teal">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <OnPlatform.WinPhone>
+                                                    <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="18" />
+                                                </OnPlatform.WinPhone>
+                                                <OnPlatform.Android>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                   Phone="12"
+                                   Tablet="14" />
+                                                </OnPlatform.Android>
+                                                <OnPlatform.iOS>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                   Phone="12"
+                                   Tablet="14" />
+                                                </OnPlatform.iOS>
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label LineBreakMode="NoWrap"
+                                       Text="{Binding ContactType}"
+                                       TextColor="Teal" 
+                                       Grid.Row="0"
+                                       VerticalTextAlignment="End"
+                                       HorizontalTextAlignment="Center"
+                                       XAlign="End"
+                                       YAlign="End"
+                                       Margin="5">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <OnPlatform.WinPhone>
+                                                    <OnIdiom x:TypeArguments="x:Double" Phone="14" Tablet="14" />
+                                                </OnPlatform.WinPhone>
+                                                <OnPlatform.Android>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                   Phone="10"
+                                   Tablet="12" />
+                                                </OnPlatform.Android>
+                                                <OnPlatform.iOS>
+                                                    <OnIdiom x:TypeArguments="x:Double"
+                                   Phone="10"
+                                   Tablet="12" />
+                                                </OnPlatform.iOS>
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
