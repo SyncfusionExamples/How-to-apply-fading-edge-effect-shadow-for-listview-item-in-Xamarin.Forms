@@ -1,7 +1,7 @@
 # How to apply fading edge effect (shadow) for listview item in Xamarin.Forms?
 This example demonstrates how to apply fading edge effect for the listview item in Xamarin.Forms.
 
-See [How to apply fading edge effect (shadow) for listview item in Xamarin.Forms]() for more details.
+See [How to apply fading edge effect (shadow) for listview item in Xamarin.Forms](https://www.syncfusion.com/kb/9489/how-to-apply-fading-edge-effect-shadow-for-listview-item-in-xamarin-forms) for more details.
 ## <a name="requirements-to-run-the-demo"></a>Requirements to run the demo ##
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
