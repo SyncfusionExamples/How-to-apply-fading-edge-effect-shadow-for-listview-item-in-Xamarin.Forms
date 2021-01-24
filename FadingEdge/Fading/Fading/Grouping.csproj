@@ -41,8 +41,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\GroupCollapse.png" />
-    <EmbeddedResource Include="Images\GroupExpand.png" />
     <EmbeddedResource Include="Images\Image0.png" />
     <EmbeddedResource Include="Images\Image1.png" />
     <EmbeddedResource Include="Images\Image10.png" />
@@ -72,13 +70,11 @@
     <EmbeddedResource Include="Images\Image7.png" />
     <EmbeddedResource Include="Images\Image8.png" />
     <EmbeddedResource Include="Images\Image9.png" />
-    <EmbeddedResource Include="Images\NotSelected.png" />
-    <EmbeddedResource Include="Images\Selected.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.3.0.21" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.4.0.35" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
   </ItemGroup>
 
   <ItemGroup>
