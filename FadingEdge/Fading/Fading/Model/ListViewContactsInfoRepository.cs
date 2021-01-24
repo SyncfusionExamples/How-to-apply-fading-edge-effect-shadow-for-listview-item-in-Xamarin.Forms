@@ -41,7 +41,6 @@ namespace Grouping
                     ContactType = contactType[random.Next(0, 5)],
                     ContactNumber = random.Next(100, 400).ToString() + "-" + random.Next(500, 800).ToString() + "-" + random.Next(1000, 2000).ToString(),
                     ContactName = CustomerNames[i],
-                    ContactImage = ImageSource.FromResource("Grouping.Images.Image" + random.Next(0, 28) + ".png", assembly),
                 };
                 customerDetails.Add(details);
             }
